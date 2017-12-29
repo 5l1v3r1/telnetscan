@@ -3,7 +3,7 @@
 cat log.txt | while read IP
 do
 
-proxychains nc -z -v $IP 23; 
+nc -z -v $IP 23; 
 if [[ $? == 0 ]]; then
 USER='admin'
 PASS='admin'
